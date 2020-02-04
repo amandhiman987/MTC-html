@@ -1,0 +1,252 @@
+@import "variables";
+@import "mixins";
+
+body {
+  background: #fff;
+  font-size: $base-font-size;
+  font-family: $primary-font;
+  color: $base-color;
+  overflow-x: hidden;
+}
+
+.bg-primary{
+  background: $primary-color !important;
+}
+
+.bg-secondary{
+  background: $secondary-color !important;
+}
+
+.btn-primary{
+  background: $primary-color;
+  border-color: $primary-color;
+  box-shadow: none !important;
+  &:hover, &:active, &:focus{
+    background: darken($primary-color, 15%) !important;
+    border-color: darken($primary-color, 15%) !important;
+  }
+}
+
+.btn-secondary{
+  background: $secondary-color;
+  border-color: $secondary-color;
+  box-shadow: none !important;
+  &:hover, &:active, &:focus {
+    background: darken($secondary-color, 15%) !important;
+    border-color: darken($secondary-color, 15%) !important;
+  }
+}
+
+.form-control{
+  border-color: $dark-gray;
+  color: $dark-gray;
+}
+
+header#header{
+  padding: 0 60px;
+  background: #fff;
+  .toggle-btn{
+    font-size: 35px;
+    color: $primary-color;
+    margin-right: 75px;
+    line-height: 100px;
+    margin-top: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .main-nav{
+    @include flexbox();
+    float: right;
+    list-style: none;
+    li{
+      margin-left: 10px;
+      position: relative;
+      top: -5px;
+      @include transition(top, 0.2s);
+      background: $primary-color;
+      a{
+        @include flexbox();
+        @include align-items(flex-end);
+        height: 100px;
+        padding: 0 15px 5px;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+
+        i{
+          font-size: 24px;
+        }
+        &:hover{
+          text-decoration: none;
+        }
+      }
+      &.social-menu-item{
+        background: #d7d3e4;
+      }
+
+      &:hover{
+        top:  0;
+      }
+    }
+  }
+}
+
+section.home-banner{
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 100px;
+  overflow: hidden;
+  position: relative;
+  .slide-item{
+    .slide-heading{
+      position: absolute;
+    }
+    .slide-img{
+      position: absolute;
+      img{
+        width: 100%;
+      }
+    }
+    &.slide1{
+      .slide-heading{
+        left: 20%;
+        top: 10%;
+      }
+      .slide-img{
+        right: -80px;
+        bottom: -80px;
+        width: 100%;
+      }
+    }
+  }
+
+  .slide-form{
+    background: #f9f9f9;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -77px;
+    display: inline-block;
+    left: 100px;
+    @include transform(translate(0, -50%));
+    //@include box-shadow(0, .5rem, 1rem, 0, rgba(0,0,0,.15));
+    h4.form-hd{
+      color: $secondary-color;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .form-control{
+      background: #f9f9f9;
+      color: #787878;
+    }
+    .btn{
+      font-weight: bold;
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+    .input-sm{
+      width: 118px;
+    }
+    .custom-input {
+      position: relative;
+      padding: 0;
+      border: thin solid $dark-gray;
+      @include border-radius(4px);
+    }
+
+    .custom-input-field {
+      font-family: inherit;
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid transparent;
+      outline: 0;
+      font-size: $base-font-size;
+      font-weight: bold;
+      color: #787878;
+      padding: 10px 10px 0;
+      min-height: 35px;
+      background: transparent;
+      transition: border-color 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .custom-input-field::placeholder {
+      color: transparent;
+    }
+
+    .custom-input-field:placeholder-shown ~ .custom-input-label {
+      font-size: $base-font-size;
+      cursor: text;
+      top: 7px;
+    }
+
+    .custom-input-label,
+    .custom-input-field:focus ~ .custom-input-label {
+      position: absolute;
+      top: 0;
+      left: 9px;
+      display: block;
+      transition: 0.2s;
+      font-size: 10px;
+      color: $dark-gray;
+    }
+
+    select.custom-input-field{
+      padding-left: 5px;
+    }
+
+    .search-input{
+      padding-left: 40px;
+      background: url("../images/search.svg") no-repeat left 10px center;
+      background-size: 14px;
+    }
+  }
+
+}
+
+footer#footer{
+  background: $primary-color;
+  color: #fff;
+  font-family: $secondary-font;
+  font-size: $base-font-size;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  .copyright-text{
+    line-height: 80px;
+    float: left;
+    padding-left: 60px;
+  }
+  .footer-nav{
+    overflow: hidden;
+    li{
+      list-style: none;
+      float: left;
+      a{
+        line-height: 80px;
+        color: #fff;
+        display: inline-block;
+        padding: 0 10px;
+      }
+      &.contact-btn{
+        a{
+          padding: 0 40px;
+          margin-left: 40px;
+          font-family: $primary-font;
+          text-transform: uppercase;
+          font-size: 20px;
+          font-weight: 600;
+          letter-spacing: 2px;
+          background: $secondary-color;
+        }
+      }
+    }
+  }
+
+}
+
+
