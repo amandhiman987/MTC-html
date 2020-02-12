@@ -95,18 +95,18 @@ header#header{
 section.home-banner{
   height: 100vh;
   width: 100vw;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   overflow: hidden;
   position: relative;
+  .home-banner-slides, .slick-list, .slick-track, .slide-item {
+    height: 100%;
+  }
   .slide-item{
     .slide-heading{
       position: absolute;
     }
     .slide-img{
       position: absolute;
-      img{
-        width: 100%;
-      }
     }
     &.slide1{
       .slide-heading{
@@ -118,6 +118,24 @@ section.home-banner{
         bottom: -80px;
         width: 100%;
       }
+    }
+  }
+
+  .banner-navigation{
+    position: fixed;
+    z-index: 9;
+    border: 2px dashed #c8cdd8;
+    width: 500px;
+    height: 500px;
+    text-align: right;
+    @include border-radius(50%);
+    left: 0;
+    margin-left: -380px;
+    top: 50%;
+    @include transform(translate(0, -50%));
+    svg{
+      width: 50px;
+      height: 50px;
     }
   }
 

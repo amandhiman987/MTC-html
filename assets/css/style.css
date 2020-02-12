@@ -1,7 +1,7 @@
 body {
   background: #fff;
   font-size: 13px;
-  font-family: TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+  font-family: "Crimson Text", serif;
   color: #333333;
   overflow-x: hidden; }
 
@@ -91,15 +91,15 @@ header#header {
 section.home-banner {
   height: 100vh;
   width: 100vw;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   overflow: hidden;
   position: relative; }
+  section.home-banner .home-banner-slides, section.home-banner .slick-list, section.home-banner .slick-track, section.home-banner .slide-item {
+    height: 100%; }
   section.home-banner .slide-item .slide-heading {
     position: absolute; }
   section.home-banner .slide-item .slide-img {
     position: absolute; }
-    section.home-banner .slide-item .slide-img img {
-      width: 100%; }
   section.home-banner .slide-item.slide1 .slide-heading {
     left: 20%;
     top: 10%; }
@@ -107,6 +107,26 @@ section.home-banner {
     right: -80px;
     bottom: -80px;
     width: 100%; }
+  section.home-banner .banner-navigation {
+    position: fixed;
+    z-index: 9;
+    border: 2px dashed #c8cdd8;
+    width: 500px;
+    height: 500px;
+    text-align: right;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    left: 0;
+    margin-left: -380px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
+    section.home-banner .banner-navigation svg {
+      width: 50px;
+      height: 50px; }
   section.home-banner .slide-form {
     background: #f9f9f9;
     padding: 40px;
@@ -189,7 +209,7 @@ section.home-banner {
 footer#footer {
   background: #5016cc;
   color: #fff;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   overflow: hidden;
   position: fixed;
@@ -213,7 +233,7 @@ footer#footer {
       footer#footer .footer-nav li.contact-btn a {
         padding: 0 40px;
         margin-left: 40px;
-        font-family: TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+        font-family: "Crimson Text", serif;
         text-transform: uppercase;
         font-size: 20px;
         font-weight: 600;
