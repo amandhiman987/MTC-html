@@ -44,7 +44,9 @@ body {
 
 header#header{
   padding: 0 60px;
-  background: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
   .toggle-btn{
     font-size: 35px;
     color: $primary-color;
@@ -93,13 +95,53 @@ header#header{
 }
 
 section.home-banner{
-  height: 100vh;
-  width: 100vw;
-  margin-bottom: 80px;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
-  position: relative;
+  position: fixed;
   .home-banner-slides, .slick-list, .slick-track, .slide-item {
     height: 100%;
+  }
+  .slick-arrow{
+    position: fixed;
+    top: 50%;
+    left: 146px;
+    width: 24px;
+    height: 30px;
+    background: #fff;
+    border: none;
+    overflow: hidden;
+    text-indent: -9999px;
+    z-index: 10;
+    @include border-radius(50%);
+    &:before{
+      font-family: FontAwesome;
+      position: absolute;
+      left: 0;
+      width: 24px;
+      text-align: center;
+      color: $primary-color;
+      text-indent: 0;
+      line-height: 18px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &.slick-prev{
+      margin-top: -38px;
+      &:before{
+        content: '\f106';
+      }
+    }
+    &.slick-next{
+      margin-top: 8px;
+      &:before{
+        content: '\f107';
+        line-height:22px;
+      }
+    }
+    &:focus{
+      outline: none;
+    }
   }
   .slide-item{
     .slide-heading{
@@ -110,13 +152,59 @@ section.home-banner{
     }
     &.slide1{
       .slide-heading{
-        left: 20%;
-        top: 10%;
+        left: 30%;
+        top: 18%;
       }
       .slide-img{
         right: -80px;
-        bottom: -80px;
+        bottom: -150px;
         width: 100%;
+        img{
+          max-width: 100%;
+        }
+      }
+    }
+    &.slide2{
+      .slide-heading{
+        right: 60px;
+        top:25%;
+      }
+      .slide-img{
+        right: -80px;
+        bottom: -40px;
+        img{
+          max-width: 100%;
+        }
+      }
+    }
+    &.slide3{
+      .slide-heading{
+        right: 200px;
+        top:18%;
+      }
+      .slide-img{
+        width: 100%;
+        right: 0;
+        bottom: -180px;
+        img{
+          width: 110%;
+          margin-left: -5%;
+        }
+      }
+    }
+    &.slide4{
+      .slide-heading{
+        right: 150px;
+        top:20%;
+      }
+      .slide-img{
+        width: 100%;
+        right: 0;
+        bottom: -220px;
+        img{
+          width: 110%;
+          margin-left: -5%;
+        }
       }
     }
   }
@@ -130,12 +218,70 @@ section.home-banner{
     text-align: right;
     @include border-radius(50%);
     left: 0;
-    margin-left: -380px;
+    margin: 0 0 0 -340px;
+    padding: 0;
     top: 50%;
     @include transform(translate(0, -50%));
     svg{
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
+      path, g{
+        fill: #dddddd;
+      }
+    }
+    li{
+      position: absolute;
+      list-style: none;
+      &:after{
+        width: 15px;
+        height: 15px;
+        background: #dddddd;
+        @include border-radius(50%);
+        position: absolute;
+        content: '';
+        border: 4px solid #ddd;
+      }
+      &:first-child{
+        right: 38px;
+        top: 135px;
+        &:after{
+          right: -26px;
+          top: 8px;
+        }
+      }
+      &:nth-child(2){
+        top: 50%;
+        right: 15px;
+        margin-top: -20px;
+        &:after{
+          right: -23px;
+          top: 12px;
+        }
+      }
+      &:nth-child(3){
+        top: 330px;
+        right: 42px;
+        &:after{
+          right: -29px;
+          top: 9px;
+        }
+      }
+      &:last-child{
+        top: 402px;
+        right: 106px;
+        &:after{
+          right: -34px;
+          top: 20px;
+        }
+      }
+      &.active{
+        svg path, svg g{
+          fill: $primary-color;
+        }
+        &:after{
+          border-color: $primary-color;
+        }
+      }
     }
   }
 
@@ -144,15 +290,35 @@ section.home-banner{
     padding: 40px;
     position: absolute;
     top: 50%;
-    margin-top: -77px;
     display: inline-block;
-    left: 100px;
+    left: 200px;
+    color: $darker-gray;
     @include transform(translate(0, -50%));
-    //@include box-shadow(0, .5rem, 1rem, 0, rgba(0,0,0,.15));
     h4.form-hd{
       color: $secondary-color;
       font-weight: bold;
       margin-bottom: 15px;
+      position: relative;
+      a{
+        color: $darker-gray;
+        text-decoration: underline;
+        font-size: 18px;
+        font-weight: normal;
+      }
+      &.form-hd-check{
+        &:before{
+          @include border-radius(50%);
+          background: $primary-color;
+          content: '';
+          position: absolute;
+          left: -25px;
+          border: 3px solid #fff;
+          @include box-shadow(0, 0, 0, 1px, $primary-color);
+          width: 14px;
+          height: 14px;
+          top: 5px;
+        }
+      }
     }
     .form-control{
       background: #f9f9f9;
@@ -179,10 +345,10 @@ section.home-banner{
       border: 0;
       border-bottom: 1px solid transparent;
       outline: 0;
-      font-size: $base-font-size;
+      font-size: 13px;
       font-weight: bold;
       color: #787878;
-      padding: 10px 10px 0;
+      padding: 16px 10px 0;
       min-height: 35px;
       background: transparent;
       transition: border-color 0.2s;
@@ -195,7 +361,7 @@ section.home-banner{
     }
 
     .custom-input-field:placeholder-shown ~ .custom-input-label {
-      font-size: $base-font-size;
+      font-size: 13px;
       cursor: text;
       top: 7px;
     }
@@ -207,7 +373,7 @@ section.home-banner{
       left: 9px;
       display: block;
       transition: 0.2s;
-      font-size: 10px;
+      font-size: 12px;
       color: $dark-gray;
     }
 
@@ -216,9 +382,21 @@ section.home-banner{
     }
 
     .search-input{
-      padding-left: 40px;
+      padding-left: 35px;
       background: url("../images/search.svg") no-repeat left 10px center;
       background-size: 14px;
+      width: 170px;
+    }
+
+    .datepicker{
+      min-width: 130px;
+      .custom-input-field{
+        padding-left: 30px;
+        background: url("../images/calendar.svg") no-repeat left 10px center;
+      }
+      .custom-input-label{
+        left: 30px !important;
+      }
     }
   }
 
@@ -228,7 +406,7 @@ footer#footer{
   background: $primary-color;
   color: #fff;
   font-family: $secondary-font;
-  font-size: $base-font-size;
+  font-size: 12px;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -268,3 +446,32 @@ footer#footer{
 }
 
 
+.custom-control{
+  line-height: 24px;
+  &.custom-radio{
+    label{
+      z-index: 9;
+      cursor: pointer;
+      &:before{
+        @include border-radius(0);
+        background: none;
+        border-color: $primary-color !important;
+        background: none !important;
+        pointer-events: all;
+        @include box-shadow(0,0,0,0, #000 !important);
+      }
+      &:after{
+        @include border-radius(0);
+        top: 0.5rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        left: -1.25rem;
+      }
+    }
+    .custom-control-input{
+      &:checked~.custom-control-label:after{
+        background: $primary-color !important;
+      }
+    }
+  }
+}
