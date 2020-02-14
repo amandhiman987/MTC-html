@@ -27,13 +27,13 @@
 <div class="wrapper">
     <header id="header">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-6 col-sm-5">
                 <a href="javascript:void(0)" class="toggle-btn"><i class="fa fa-bars"></i></a>
                 <a href="index.html" class="logo">
                     <img src="assets/images/logo.svg" width="130" height="80" alt="Logo"/>
                 </a>
             </div>
-            <div class="col-sm-8">
+            <div class="col-6 col-sm-7">
                 <ul class="main-nav">
                     <li><a href="#"><span>Sign In</span></a></li>
                     <li class="social-menu-item"><a href="#"><span><i class="fa fa-instagram"></i></span></a></li>
@@ -44,12 +44,54 @@
             </div>
         </div>
     </header>
+
+
     <section class="home-banner">
         <div class="home-banner-slides">
-            <div class="slide-item slide4 ">
-                <div class="moving-content slide-heading" data-speed="0.06"><img src="assets/images/home-banner/book-cruise-hd.svg" alt=""></div>
-                <div class="moving-content slide-img" data-speed="0.02"><img src="assets/images/home-banner/cruise.png" alt=""></div>
-                <div class="slide-form shadow-lg rounded">
+            <div class="slide-item slide1">
+                <div class="moving-content slide-heading" data-speed="0.06"><img src="assets/images/home-banner/book-hotel-hd.svg" alt=""></div>
+                <div class="moving-content slide-img" data-speed="0.02"><img src="assets/images/home-banner/hotel.png" alt=""></div>
+                <div class="slide-form shadow-lg rounded text-left">
+                    <h4 class="form-hd">Search for Hotel/Home/Villa</h4>
+                    <form action="">
+                        <div class="form-row">
+                            <div class="col-auto"><input type="text" class="form-control search-input" placeholder="Destination" /></div>
+                            <div class="col-auto">
+                                <div class="custom-input input-sm datepicker">
+                                    <input type="text" class="custom-input-field" placeholder="Your Email">
+                                    <label for="" class="custom-input-label">Check in</label>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="custom-input input-sm datepicker">
+                                    <input type="text" class="custom-input-field" placeholder="Your Email">
+                                    <label for="" class="custom-input-label">Check out</label>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="custom-input input-sm datepicker">
+                                    <select name="" id="" class="form-control custom-input-field">
+                                        <option>1 Adult</option>
+                                        <option>2 Adults</option>
+                                    </select>
+                                    <label class="custom-input-label">Guests</label>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="custom-input input-sm">
+                                    <input type="text" class="custom-input-field" value="$10000">
+                                    <label class="custom-input-label">Estimated Budget</label>
+                                </div>
+                            </div>
+                            <div class="col-auto"><button class="btn btn-secondary">Next</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="slide-item slide2 ">
+                <div class="moving-content slide-heading" data-speed="0.06"><img src="assets/images/home-banner/include-meal-hd.svg" alt=""></div>
+                <div class="moving-content slide-img" data-speed="0.02"><img src="assets/images/home-banner/meal.png" alt=""></div>
+                <div class="slide-form shadow-lg rounded text-left">
                     <form action="" class="">
                         <h4 class="form-hd d-flex justify-content-between align-items-center">
                             <span>Hotel/Home/Villa :</span>
@@ -60,67 +102,30 @@
                             <div class="col-auto">Persons : <span class="font-weight-bold">2 Adults & 2 Childrens</span></div>
                         </div>
                         <h4 class="form-hd form-hd-check d-flex justify-content-between align-items-center mt-4">
-                            <span>More Hotel services :</span>
-                            <a href="javascript:void(0)">Edit</a></h4>
+                            <span>Add More Services :</span>
+                            <a href="javascript:void(0)">Skip</a></h4>
                         <div class="row mb-4">
                             <div class="col-auto">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="cruisecheck1" checked="checked" name="cruisecheck" value="customEx">
-                                    <label class="custom-control-label" for="cruisecheck1">With Meal</label>
+                                    <input type="radio" class="custom-control-input" id="customRadio1" checked="checked" name="example1" value="customEx">
+                                    <label class="custom-control-label" for="customRadio1">With Meal</label>
                                 </div>
                             </div>
                             <div class="col-auto">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="cruisecheck2" name="cruisecheck" value="customEx">
-                                    <label class="custom-control-label" for="cruisecheck2">Without Meal</label>
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example1" value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">Without Meal</label>
                                 </div>
                             </div>
                         </div>
-                        <h4 class="form-hd form-hd-check d-flex justify-content-between align-items-center mt-4 mb-2">
-                            <span>Search for Flight :</span>
-                            <a href="javascript:void(0)">Edit</a></h4>
-                        <div class="row">
-                            <div class="col-auto">Flying From/to : California to New York</div>
-                            <div class="col-auto">Departing & Returing date : <span class="font-weight-bold">Mon 02,2019 to Mon 09,2019</span></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-auto">Persons : <span class="font-weight-bold">2 Adults & 2 Childrens</span></div>
-                        </div>
-                        <h4 class="form-hd form-hd-check d-flex justify-content-between align-items-center mt-4 ">
-                            <span>Search for Cruise :</span>
-                            <a href="javascript:void(0)">Skip</a></h4>
-                        <div class="form-row">
-                            <div class="col-auto"><input type="text" class="form-control search-input" placeholder="Going to" /></div>
-                            <div class="col-auto">
-                                <div class="custom-input input-sm datepicker">
-                                    <input type="text" class="custom-input-field" value="02/12/2020">
-                                    <label for="" class="custom-input-label">Departs as early as</label>
-                                </div>
-                            </div>
-                            <div class="col-auto">
-                                <div class="custom-input input-sm datepicker">
-                                    <input type="text" class="custom-input-field" value="04/12/2020">
-                                    <label for="" class="custom-input-label">Departs as late as</label>
-                                </div>
-                            </div>
-                            <div class="col-auto">
-                                <div class="custom-input input-sm">
-                                    <select name="" id="" class="form-control custom-input-field">
-                                        <option>1 Adult</option>
-                                        <option>2 Adults</option>
-                                    </select>
-                                    <label class="custom-input-label">No. of Travelers</label>
-                                </div>
-                            </div>
-                            <div class="col-auto"><button class="btn btn-secondary">Search</button></div>
-                        </div>
+                        <button type="submit" class="btn btn-secondary">Next</button>
                     </form>
                 </div>
             </div>
             <div class="slide-item slide3 ">
                 <div class="moving-content slide-heading" data-speed="0.06"><img src="assets/images/home-banner/book-flight.svg" alt=""></div>
                 <div class="moving-content slide-img" data-speed="0.02"><img src="assets/images/home-banner/flight.png" alt=""></div>
-                <div class="slide-form shadow-lg rounded">
+                <div class="slide-form shadow-lg rounded text-left">
                     <form action="" class="">
                         <h4 class="form-hd d-flex justify-content-between align-items-center">
                             <span>Hotel/Home/Villa :</span>
@@ -179,76 +184,73 @@
                     </form>
                 </div>
             </div>
-            <div class="slide-item slide2 ">
-                <div class="moving-content slide-heading" data-speed="0.06"><img src="assets/images/home-banner/include-meal-hd.svg" alt=""></div>
-                <div class="moving-content slide-img" data-speed="0.02"><img src="assets/images/home-banner/meal.png" alt=""></div>
-                <div class="slide-form shadow-lg rounded">
+            <div class="slide-item slide4 ">
+                <div class="moving-content slide-heading" data-speed="0.06"><img src="assets/images/home-banner/book-cruise-hd.svg" alt=""></div>
+                <div class="moving-content slide-img" data-speed="0.02"><img src="assets/images/home-banner/cruise.png" alt=""></div>
+                <div class="slide-form shadow-lg rounded text-left">
                     <form action="" class="">
                         <h4 class="form-hd d-flex justify-content-between align-items-center">
                             <span>Hotel/Home/Villa :</span>
                             <a href="javascript:void(0)">Edit</a></h4>
-                        <div class="row">
+                        <div class="row home-hotel-options">
                             <div class="col-auto">Destination : California</div>
                             <div class="col-auto">Check in/out date : <span class="font-weight-bold">Mon 02,2019 to Mon 09,2019</span></div>
                             <div class="col-auto">Persons : <span class="font-weight-bold">2 Adults & 2 Childrens</span></div>
                         </div>
                         <h4 class="form-hd form-hd-check d-flex justify-content-between align-items-center mt-4">
-                            <span>Add More Services :</span>
-                            <a href="javascript:void(0)">Skip</a></h4>
+                            <span>More Hotel services :</span>
+                            <a href="javascript:void(0)">Edit</a></h4>
                         <div class="row mb-4">
                             <div class="col-auto">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="customRadio1" checked="checked" name="example1" value="customEx">
-                                    <label class="custom-control-label" for="customRadio1">With Meal</label>
+                                    <input type="radio" class="custom-control-input" id="cruisecheck1" checked="checked" name="cruisecheck" value="customEx">
+                                    <label class="custom-control-label" for="cruisecheck1">With Meal</label>
                                 </div>
                             </div>
                             <div class="col-auto">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example1" value="customEx">
-                                    <label class="custom-control-label" for="customRadio2">Without Meal</label>
+                                    <input type="radio" class="custom-control-input" id="cruisecheck2" name="cruisecheck" value="customEx">
+                                    <label class="custom-control-label" for="cruisecheck2">Without Meal</label>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-secondary">Next</button>
-                    </form>
-                </div>
-            </div>
-            <div class="slide-item slide1">
-                <div class="moving-content slide-heading" data-speed="0.06"><img src="assets/images/home-banner/book-hotel-hd.svg" alt=""></div>
-                <div class="moving-content slide-img" data-speed="0.02"><img src="assets/images/home-banner/hotel.png" alt=""></div>
-                <div class="slide-form shadow-lg rounded">
-                    <h4 class="form-hd">Search for Hotel/Home/Villa</h4>
-                    <form action="">
-                        <div class="form-row">
-                            <div class="col-auto"><input type="text" class="form-control search-input" placeholder="Destination" /></div>
+                        <h4 class="form-hd form-hd-check d-flex justify-content-between align-items-center mt-4 mb-2">
+                            <span>Search for Flight :</span>
+                            <a href="javascript:void(0)">Edit</a></h4>
+                        <div class="row">
+                            <div class="col-auto">Flying From/to : California to New York</div>
+                            <div class="col-auto">Departing & Returing date : <span class="font-weight-bold">Mon 02,2019 to Mon 09,2019</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto">Persons : <span class="font-weight-bold">2 Adults & 2 Childrens</span></div>
+                        </div>
+                        <h4 class="form-hd form-hd-check d-flex justify-content-between align-items-center mt-4 ">
+                            <span>Search for Cruise :</span>
+                            <a href="javascript:void(0)">Skip</a></h4>
+                        <div class="form-row search-for-cruise">
+                            <div class="col-auto"><input type="text" class="form-control search-input" placeholder="Going to" /></div>
                             <div class="col-auto">
                                 <div class="custom-input input-sm datepicker">
-                                    <input type="text" class="custom-input-field" placeholder="Your Email">
-                                    <label for="" class="custom-input-label">Check in</label>
+                                    <input type="text" class="custom-input-field" value="02/12/2020">
+                                    <label for="" class="custom-input-label">Departs as early as</label>
                                 </div>
                             </div>
                             <div class="col-auto">
                                 <div class="custom-input input-sm datepicker">
-                                    <input type="text" class="custom-input-field" placeholder="Your Email">
-                                    <label for="" class="custom-input-label">Check out</label>
-                                </div>
-                            </div>
-                            <div class="col-auto">
-                                <div class="custom-input input-sm datepicker">
-                                    <select name="" id="" class="form-control custom-input-field">
-                                        <option>1 Adult</option>
-                                        <option>2 Adults</option>
-                                    </select>
-                                    <label class="custom-input-label">Guests</label>
+                                    <input type="text" class="custom-input-field" value="04/12/2020">
+                                    <label for="" class="custom-input-label">Departs as late as</label>
                                 </div>
                             </div>
                             <div class="col-auto">
                                 <div class="custom-input input-sm">
-                                    <input type="text" class="custom-input-field" value="$10000">
-                                    <label class="custom-input-label">Estimated Budget</label>
+                                    <select name="" id="" class="form-control custom-input-field">
+                                        <option>1 Adult</option>
+                                        <option>2 Adults</option>
+                                    </select>
+                                    <label class="custom-input-label">No. of Travelers</label>
                                 </div>
                             </div>
-                            <div class="col-auto"><button class="btn btn-secondary">Next</button></div>
+                            <div class="col-auto"><button class="btn btn-secondary">Search</button></div>
                         </div>
                     </form>
                 </div>
@@ -292,7 +294,8 @@
 <script>
     $(document).ready(function(){
         $('.home-banner .home-banner-slides').slick({
-            fade: true
+            fade: true,
+            adaptiveHeight: true
         });
     });
 </script>
